@@ -3,7 +3,7 @@
 
 set -e
 # Set up the URL to the version of musl used by alpine at the time of writing.
-LATEST_MUSL_URL="https://musl.libc.org/releases/musl-1.1.22.tar.gz"
+LATEST_MUSL_URL="https://musl.libc.org/releases/musl-1.2.1.tar.gz"
 # Set up the URL for the latest zlib version available at the time of writing.
 LATEST_ZLIB_URL="https://www.zlib.net/zlib-1.2.11.tar.gz"
 BUNDLE_DIR_NAME="bundle"
@@ -58,5 +58,5 @@ cp /usr/lib/libstdc++.a "${BUNDLE_DIR}/lib"
 
 cd "${BUILD_DIR}"
 
-rm -rf "${BUNDLE_DIR}/bin/" "${BUNDLE_DIR}/share/"
+#rm -rf "${BUNDLE_DIR}/bin/" "${BUNDLE_DIR}/share/"
 tar cvzf "${BUNDLE_RES_DIR}/musl.tar.gz" "${BUNDLE_DIR_NAME}"/*
